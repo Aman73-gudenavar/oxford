@@ -1,0 +1,176 @@
+/* General Styles */
+body {
+    background-image: url("back.jpg");
+    background-size: cover;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+    margin: 0;
+    padding-top: 80px; /* Adjust padding to match the height of the header */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background: rgb(0, 0, 0);
+    position: fixed; /* Keeps header fixed at the top */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure header is above other content */
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+}
+
+.header-text {
+    text-align: left;
+}
+
+main {
+    text-align: center;
+    padding: 2rem;
+    width: 100%; /* Ensure main content takes full width */
+    box-sizing: border-box;
+}
+
+.element-style {
+    font-size: 2rem;
+}
+
+.highlight, .event-title, .date, .venue {
+    margin-top: 1rem;
+}
+
+.event-title {
+    font-size: 5rem;
+}
+
+.venue a {
+    color: #ffd700;
+    text-decoration: none;
+}
+
+.venue a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 426px) {
+    body {
+        margin: 0;
+        padding-top: 60px; /* Adjust padding to match the height of the header */
+        width: 100%; /* Ensure body takes full width */
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url(back2.jpg);
+        flex-direction: column;
+    }
+    
+    header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+       
+        align-items: center;
+        padding: 10px;
+        background-color: #000000;
+        animation: fadeInMobile 1s forwards;
+    }
+
+    .logo {
+        width: 60px;
+        height: 70px;
+        margin-left: 10px;
+        animation: fadeInMobile 1s forwards;
+    }
+
+    .header-text h1 {
+        font-size: 0.7rem;
+        animation: fadeInMobile 1s forwards;
+        line-height: 1.2;
+        
+    }
+
+    .header-text h2 {
+        font-size: 0.5rem;
+        animation: fadeInMobile 1s forwards;
+        line-height: 1;
+    }
+
+    main {
+        padding: 1rem;
+        width: 100%; /* Ensure main content takes full width */
+    }
+
+    .element-style {
+        font-size: 1.5rem;
+        animation: fadeInMobile 1s forwards;
+    }
+
+    .event-title {
+        font-size: 2rem;
+        animation: fadeInMobile 1s forwards;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .venue, .date, .highlight {
+        font-size: 1rem;
+        animation: fadeInMobile 1s forwards;
+        line-height: 1.5;
+    }
+
+    .line {
+        border-top: 1px solid #fffcfc;
+        margin-bottom: 10px;
+        height: 10px;
+        animation: fadeInMobile 1s forwards;
+    }
+
+    .organizers {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        line-height: 1.5;
+        animation: fadeInMobile 1s forwards;
+    }
+
+    .organizer-name {
+        font-weight: bold;
+        font-size: small;
+        animation: fadeInMobile 1s forwards;
+    }
+
+    .countdown-box {
+        border: 2px solid #ccc;
+        padding: 20px;
+        background-color: #f0f0f0;
+        border-radius: 10px;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .countdown-item {
+        display: inline-block;
+        font-size: 20px;
+        color: #000000;
+        margin: 0 10px;
+    }
+
+    @keyframes fadeInMobile {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
